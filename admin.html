@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Servicios</title>
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+
+<body>
+    <main class="admin">
+        <h2>Gestión de Servicios</h2>
+        <table>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+            <tr>
+                <td><img src="img/hosting.jpg" width="50"></td>
+                <td>Hosting WordPress</td>
+                <td>$120.000</td>
+                <td><button>Editar</button> <button>Eliminar</button></td>
+            </tr>
+            <!-- Más servicios -->
+        </table>
+        <h3>Agregar nuevo servicio</h3>
+        <form>
+            <input type="text" placeholder="Nombre">
+            <input type="number" placeholder="Precio">
+            <input type="number" placeholder="Cantidad">
+            <textarea placeholder="Descripción"></textarea>
+            <input type="file">
+            <label><input type="checkbox"> En promoción</label>
+            <button type="submit">Guardar</button>
+        </form>
+    </main>
+</body>
+
+</html>

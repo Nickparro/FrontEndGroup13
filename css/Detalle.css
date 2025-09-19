@@ -1,0 +1,137 @@
+/* Estilos generales para el body */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Contenedor principal detalle */
+
+main.detalle {
+    max-width: 600px;
+    background-color: #ffffff;
+    margin: 40px auto;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(44, 62, 80, 0.1);
+    text-align: center;
+}
+
+
+/* Imagen del servicio */
+
+main.detalle img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(51, 102, 204, 0.2);
+}
+
+
+/* Título del servicio */
+
+main.detalle h2 {
+    font-size: 2rem;
+    color: #3366cc;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+
+/* Párrafos con detalles */
+
+main.detalle p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #444;
+}
+
+
+/* Negrita para etiquetas dentro de párrafos */
+
+main.detalle p strong {
+    color: #222;
+}
+
+
+/* Estilos para los enlaces */
+
+main.detalle a {
+    display: inline-block;
+    margin: 20px 12px 0 12px;
+    padding: 0.85em 2.2em;
+    background-color: #3366cc;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(51, 102, 204, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+main.detalle a:hover,
+main.detalle a:focus {
+    background-color: #224488;
+    transform: scale(1.05);
+    outline: none;
+}
+
+
+/* Responsive para móviles */
+
+@media (max-width: 480px) {
+    main.detalle {
+        padding: 20px 15px;
+        margin: 20px 10px;
+    }
+    main.detalle h2 {
+        font-size: 1.6rem;
+    }
+    main.detalle p {
+        font-size: 1rem;
+    }
+    main.detalle a {
+        font-size: 1rem;
+        padding: 0.7em 1.8em;
+        margin: 15px 8px 0 8px;
+    }
+}
+
+
+/* Lista de características del servicio */
+
+main.detalle ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+main.detalle li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #333;
+}
+
+
+/* Ícono personalizado tipo check */
+
+main.detalle li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #3366cc;
+    font-weight: bold;
+    font-size: 1rem;
+}

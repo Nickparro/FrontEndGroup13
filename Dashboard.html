@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Agencia FrontDev.</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Panel de Administración</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="logout.html">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin">
+        <h2>Gestión de Servicios</h2>
+
+        <!-- Tabla de servicios existentes -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="img/hosting.jpg" width="60" alt="Hosting"></td>
+                    <td>Hosting WordPress</td>
+                    <td>$120.000</td>
+                    <td>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </td>
+                </tr>
+                <!-- Más servicios dinámicos -->
+            </tbody>
+        </table>
+
+        <!-- Formulario para agregar o editar servicios -->
+        <h3>Agregar / Editar Servicio</h3>
+        <form action="guardar_servicio.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="nombre" placeholder="Nombre del servicio" required>
+            <input type="number" name="precio" placeholder="Precio" required>
+            <input type="number" name="cantidad" placeholder="Cantidad disponible" required>
+            <textarea name="descripcion" placeholder="Descripción del servicio" rows="4" required></textarea>
+            <input type="file" name="imagen" accept="image/*">
+            <label>
+        <input type="checkbox" name="promocion"> En promoción
+      </label>
+            <button type="submit">Guardar servicio</button>
+        </form>
+
+        <!-- Sección de servicios comprados -->
+        <h2>Servicios Comprados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Servicio</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Rodríguez</td>
+                    <td>Optimización SEO</td>
+                    <td>2025-08-28</td>
+                    <td><span class="estado pendiente">Pendiente</span></td>
+                    <td>
+                        <button>Actualizar estado</button>
+                        <button>Ver detalles</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laura Gómez</td>
+                    <td>Diseño de Blogs</td>
+                    <td>2025-08-29</td>
+                    <td><span class="estado entregado">Entregado</span></td>
+                    <td>
+                        <button>Actualizar estado</button>
+                        <button>Ver detalles</button>
+                    </td>
+                </tr>
+                <!-- Más registros dinámicos -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agencia FrontDev.. Panel de administración.</p>
+    </footer>
+</body>
+
+</html>

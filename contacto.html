@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contáctanos - Agencia FrontDev</title>
+    <link rel="stylesheet" href="css/Styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Agencia FrontDev</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto">
+        <h2>Solicita tu servicio</h2>
+        <p>Déjanos tus datos y te contactaremos para ayudarte con tu proyecto web.</p>
+        <form action="gracias.html" method="post">
+            <label>Nombre completo</label>
+            <input type="text" name="nombre" required>
+
+            <label>Correo electrónico</label>
+            <input type="email" name="correo" required>
+
+            <label>Servicio que te interesa</label>
+            <select name="servicio">
+        <option>Hosting WordPress</option>
+        <option>Optimización SEO</option>
+        <option>Mantenimiento Web</option>
+        <option>Tiendas Online</option>
+        <option>Diseño de Blogs</option>
+        <option>Seguridad Web</option>
+      </select>
+
+            <label>Mensaje adicional</label>
+            <textarea name="mensaje" rows="4"></textarea>
+
+            <button type="submit">Enviar solicitud</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agencia WP Pro. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

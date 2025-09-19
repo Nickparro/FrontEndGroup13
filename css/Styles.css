@@ -1,0 +1,537 @@
+/* Reset general y configuración base */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*  Estilos globales del cuerpo */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Espaciado para títulos */
+
+h1,
+h2,
+h3 {
+    margin-bottom: 0.5em;
+}
+
+
+/*  Estilos para enlaces */
+
+a {
+    text-decoration: none;
+    color: #007acc;
+}
+
+
+/* Imágenes responsivas */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*  Barra de navegación */
+
+nav {
+    background-color: #222;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*  Lista de enlaces en navbar */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+
+/*  Enlaces del navbar */
+
+nav a {
+    color: white;
+    font-weight: bold;
+}
+
+
+/*  Pie de página */
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+
+/* Slider de imágenes */
+
+.slider {
+    background-color: #007acc;
+    color: white;
+    padding: 15em;
+    text-align: center;
+    position: relative;
+}
+
+
+/*  Cada slide del carrusel */
+
+.slide {
+    display: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 150px;
+    /* o lo que necesites */
+    padding: 2em;
+}
+
+
+/*  Slide activo */
+
+.slide.active {
+    display: block;
+}
+
+
+/* Botón de llamado a la acción */
+
+.cta {
+    margin-top: 3em;
+    padding: 0.7em 1.5em;
+    background-color: white;
+    color: #007acc;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.descripcion {
+    max-width: 100%;
+    margin: 40px auto 0 auto;
+    padding: 32px 28px;
+    background: #f8fbfd;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(44, 62, 80, 0.07);
+}
+
+.descripcion h2 {
+    text-align: center;
+    color: #3366cc;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.descripcion p {
+    font-size: 1.13rem;
+    color: #232e38;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin: 5px auto;
+    max-width: 950px;
+}
+
+
+/*  Sección de descripción y equipo */
+
+.descripcion,
+.equipo {
+    padding: 2em;
+    text-align: center;
+}
+
+.equipo h2 {
+    text-align: center;
+    color: #3366cc;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+
+/* Grid del equipo */
+
+.equipo .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+
+/*  Tarjeta de cada miembro del equipo */
+
+.miembro {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/**  Sección de servicios */
+
+.servicios {
+    padding: 2em;
+    text-align: center;
+}
+
+
+/*  Grid de servicios */
+
+.servicios .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+
+/* Cada tarjeta de servicio */
+
+.servicio {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(44, 62, 80, 0.07);
+    padding: 1.8em 1.5em 2.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+
+/* Sombra al pasar el mouse */
+
+.servicio:hover {
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.15);
+}
+
+
+/* Imagen del servicio */
+
+.servicio img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1.2em;
+    box-shadow: 0 4px 12px rgba(51, 102, 204, 0.15);
+}
+
+.servicios h2 {
+    text-align: center;
+    color: #3366cc;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+
+/* Precio */
+
+.servicio p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ff6600;
+    margin-bottom: 1.2em;
+}
+
+
+/* Enlaces estilo botón */
+
+.servicio a {
+    display: inline-block;
+    background-color: #3366cc;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.65em 1.8em;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(51, 102, 204, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 6px 0 6px;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+/* Hover y foco en botones */
+
+.servicio a:hover,
+.servicio a:focus {
+    background-color: #224488;
+    transform: scale(1.05);
+    outline: none;
+}
+
+
+/* Para que los botones estén juntos y centrados */
+
+.servicio a:first-of-type {
+    margin-left: 12px;
+    margin-right: 10px;
+    margin-bottom: 1.2em;
+}
+
+.servicio a:last-of-type {
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+
+/* Responsive para móviles */
+
+@media (max-width: 600px) {
+    .servicios {
+        padding: 1.8em 1em;
+        margin: 20px 10px;
+    }
+    .servicios>h2 {
+        font-size: 1.6rem;
+    }
+    .servicio h3 {
+        font-size: 1.1rem;
+    }
+    .servicio p {
+        font-size: 1rem;
+    }
+    .servicio a {
+        font-size: 0.95rem;
+        padding: 0.55em 1.5em;
+        margin: 6px 4px;
+    }
+}
+
+
+/*  Ventana de login */
+
+.login {
+    max-width: 400px;
+    margin: 5em auto;
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*  Formulario de login */
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Campos de entrada en login */
+
+.login input {
+    margin-bottom: 1em;
+    padding: 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/*  Botón de login */
+
+.login button {
+    padding: 0.7em;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/*  Panel de administración */
+
+.admin {
+    padding: 2em;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/*  Tabla de servicios en admin */
+
+.admin table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+
+
+/*  Celdas de la tabla */
+
+.admin th,
+.admin td {
+    border: 1px solid #ccc;
+    padding: 0.8em;
+    text-align: left;
+}
+
+
+/*  Botones de acción en admin */
+
+.admin button {
+    padding: 0.4em 0.8em;
+    margin-right: 0.5em;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/*  Formulario de edición/agregado en admin */
+
+.admin form input,
+.admin form textarea {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.6em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/*  Página de contacto y compra */
+
+.contacto,
+.comprar {
+    max-width: 600px;
+    margin: 2em auto;
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*  Formularios generales */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*  Etiquetas de formulario */
+
+form label {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+
+/*  Campos de entrada en formularios */
+
+form input,
+form select,
+form textarea {
+    padding: 0.7em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/*  Botón de envío en formularios */
+
+form button {
+    margin-top: 1.5em;
+    padding: 0.8em;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/*Dashbord */
+
+.estado {
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.estado.pendiente {
+    background-color: #ffeeba;
+    color: #856404;
+}
+
+.estado.entregado {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.cta-section {
+    background-color: #3366cc;
+    color: white;
+    padding: 2.5em 1.5em;
+    border-radius: 12px;
+    max-width: 950px;
+    max-height: 700px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(51, 102, 204, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: auto;
+}
+
+.cta-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1.8em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.cta-button {
+    background-color: #ffcc00;
+    color: #222;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.85em 2.5em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #e6b800;
+    transform: scale(1.05);
+    outline: none;
+}
