@@ -9,12 +9,12 @@
 
 <body>
     <main class="detalle">
-        <img src="img/hosting.jpg" alt="Hosting">
-        <h2>Hosting WordPress</h2>
-        <p><strong>Precio:</strong> $120.000</p>
-        <p><strong>Cantidad disponible:</strong> 15</p>
-        <p><strong>Descripción:</strong> Alojamiento rápido y seguro para tu sitio WordPress.</p>
-        <ul>
+        <img id="imagen" src="" alt="Imagen del servicio">
+        <h2 id="titulo">Hosting WordPress</h2>
+        <p><strong>Precio:</strong> <span id="precio">$120.000</span></p>
+        <p><strong>Cantidad disponible:</strong> <span id="cantidad">15</span></p>
+        <p><strong>Descripción:</strong> <span id="descripcion">Alojamiento rápido y seguro para tu sitio WordPress.</span></p>
+        <ul id="beneficios">
             <li>Instalación automática de WordPress</li>
             <li>Actualizaciones y backups automáticos</li>
             <li>Soporte 24/7 especializado en WordPress</li>
@@ -29,3 +29,112 @@
 </body>
 
 </html>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const servicios = {
+    1: {
+      titulo: "Hosting WordPress",
+      precio: "$120.000",
+      cantidad: "15",
+      descripcion: "Alojamiento rápido y seguro para tu sitio WordPress.",
+      imagen: "img/Logos/Wordpress.jpg",
+      beneficios: [
+        "Instalación automática de WordPress",
+        "Actualizaciones y backups automáticos",
+        "Soporte 24/7 especializado en WordPress",
+        "Alta velocidad con servidores SSD",
+        "Certificado SSL gratuito",
+        "Panel de control intuitivo"
+      ]
+    },
+    2: {
+      titulo: "Optimización SEO",
+      precio: "$90.000",
+      cantidad: "20",
+      descripcion: "Mejora el posicionamiento de tu sitio en buscadores.",
+      imagen: "img/Logos/SEO.jpg",
+      beneficios: [
+        "Análisis de palabras clave",
+        "Optimización de velocidad",
+        "SEO técnico",
+        "Optimización de contenido",
+        "Reporte mensual de resultados"
+      ]
+    },
+    3: {
+      titulo: "Mantenimiento Web",
+      precio: "$70.000",
+      cantidad: "30",
+      descripcion: "Mantén tu sitio siempre actualizado y seguro.",
+      imagen: "img/Logos/Mantenimiento.jpg",
+      beneficios: [
+        "Revisiones periódicas",
+        "Backups semanales",
+        "Soporte técnico",
+        "Actualización de plugins y temas",
+        "Monitoreo de seguridad"
+      ]
+    },
+    4: {
+    titulo: "Tiendas Online",
+    precio: "$150.000",
+    cantidad: "10",
+    descripcion: "Crea tu propia tienda en línea para vender productos y servicios.",
+    imagen: "img/Logos/Tienda.jpg",
+    beneficios: [
+        "Diseño de tiendas personalizadas",
+        "Integración con pasarelas de pago",
+        "Gestión de inventario",
+        "Carrito de compras seguro",
+        "Optimización para dispositivos móviles"
+    ]
+    },
+    5: {
+    titulo: "Diseño de Blogs",
+    precio: "$80.000",
+    cantidad: "25",
+    descripcion: "Diseño atractivo y funcional para tu blog personal o corporativo.",
+    imagen: "img/Logos/blog.jpg",
+    beneficios: [
+        "Plantillas personalizadas",
+        "Diseño responsivo",
+        "Optimización para SEO",
+        "Integración con redes sociales",
+        "Editor fácil de usar"
+    ]
+    },
+    6: {
+    titulo: "Seguridad Web",
+    precio: "$100.000",
+    cantidad: "18",
+    descripcion: "Protege tu sitio web contra amenazas y vulnerabilidades.",
+    imagen: "img/Logos/Security.jpg",
+    beneficios: [
+        "Firewall de aplicaciones web",
+        "Protección contra malware",
+        "Monitoreo constante",
+        "Backups de seguridad",
+        "Certificados SSL avanzados"
+    ]
+    }
+  };
+
+  if (servicios[id]) {
+    document.querySelector("h2").textContent = servicios[id].titulo;
+    document.querySelector("#precio").textContent = servicios[id].precio;
+    document.querySelector("#cantidad").textContent = servicios[id].cantidad;
+    document.querySelector("#descripcion").textContent = servicios[id].descripcion;
+    document.querySelector("#imagen").src = servicios[id].imagen;
+
+    const ul = document.querySelector("#beneficios");
+    ul.innerHTML = "";
+    servicios[id].beneficios.forEach(b => {
+      const li = document.createElement("li");
+      li.textContent = b;
+      ul.appendChild(li);
+    });
+  }
+</script>
