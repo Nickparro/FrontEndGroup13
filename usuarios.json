@@ -1,0 +1,25 @@
+[{
+        "usuario": "admin",
+        "clave": "12345"
+    },
+    {
+        "usuario": "frank",
+        "clave": "abc123"
+    },
+    {
+        "usuario": "JoseParroquiano",
+        "clave": "Jos12345"
+    },
+    {
+        "usuario": "Nicole",
+        "clave": "Nic12345"
+    },
+    {
+        "usuario": "Wilson",
+        "clave": "Wil12345"
+    },
+    {
+        "usuario": "Melanie",
+        "clave": "Melanie12345"
+    }
+]

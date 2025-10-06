@@ -21,14 +21,48 @@
         </nav>
         <main class="login">
             <h2>Acceso Administrador</h2>
-            <form action="admin.html" method="post">
+            <form id="loginForm">
                 <label>Usuario</label>
-                <input type="text" name="usuario">
+                <input type="text" id="usuario" name="usuario" required>
                 <label>Contraseña</label>
-                <input type="password" name="clave">
+                <input type="password" id="clave" name="clave" required>
                 <button type="submit">Ingresar</button>
             </form>
+            <p id="mensaje"></p>
         </main>
+    </header>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // Evita que el form recargue la página
+
+            const usuario = document.getElementById("usuario").value;
+            const clave = document.getElementById("clave").value;
+
+            // Leer archivo JSON
+            fetch("usuarios.json")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("No se pudo cargar el archivo usuarios.json");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Usuarios cargados:", data); // 👈 DEBUG
+                    const user = data.find(u => u.usuario === usuario && u.clave === clave);
+                    if (user) {
+                        document.getElementById("mensaje").innerText = "Acceso permitido";
+                        window.location.href = "admin.html"; // redirige al panel
+                    } else {
+                        document.getElementById("mensaje").innerText = "Usuario o contraseña incorrectos";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error al cargar usuarios.json:", error);
+                    document.getElementById("mensaje").innerText = "Error al cargar datos de usuario";
+                });
+        });
+    </script>
 </body>
 
 </html>
