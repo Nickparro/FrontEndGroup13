@@ -19,9 +19,12 @@
     </header>
 
     <main class="comprar">
-        <h2>Comprar: Hosting WordPress</h2>
-        <p><strong>Precio:</strong> $120.000</p>
-        <p><strong>Descripción:</strong> Alojamiento rápido y seguro para tu sitio WordPress.</p>
+        <div class="producto">
+        <img id="imagen" src="" alt="Imagen del servicio" width="140" style="display:block; margin-bottom:12px;">
+        <h2 id="titulo">Comprar:</h2>
+        <p><strong>Precio:</strong> <span id="precio"></span></p>
+        <p><strong>Descripción:</strong> <span id="descripcion"></span></p>
+        </div>
 
         <form action="confirmacion.html" method="post">
             <label>Nombre completo</label>
@@ -44,6 +47,73 @@
     <footer>
         <p>&copy; 2025 Agencia FrontDev. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+    const servicios = {
+      1: {
+        titulo: "Hosting WordPress",
+        precio: "$120.000",
+        cantidad: "15",
+        descripcion: "Alojamiento rápido y seguro para tu sitio WordPress.",
+        imagen: "img/Logos/Wordpress.jpg",
+      },
+      2: {
+        titulo: "Optimización SEO",
+        precio: "$90.000",
+        cantidad: "20",
+        descripcion: "Mejora el posicionamiento de tu sitio en buscadores.",
+        imagen: "img/Logos/SEO.jpg",
+      },
+      3: {
+        titulo: "Mantenimiento Web",
+        precio: "$70.000",
+        cantidad: "30",
+        descripcion: "Mantén tu sitio siempre actualizado y seguro.",
+        imagen: "img/Logos/Mantenimiento.jpg",
+      },
+      4: {
+        titulo: "Tiendas Online",
+        precio: "$150.000",
+        cantidad: "10",
+        descripcion: "Crea tu propia tienda en línea para vender productos y servicios.",
+        imagen: "img/Logos/Tienda.jpg",
+      },
+      5: {
+        titulo: "Diseño de Blogs",
+        precio: "$80.000",
+        cantidad: "25",
+        descripcion: "Diseño atractivo y funcional para tu blog personal o corporativo.",
+        imagen: "img/Logos/blog.jpg",
+      },
+      6: {
+        titulo: "Seguridad Web",
+        precio: "$100.000",
+        cantidad: "18",
+        descripcion: "Protege tu sitio web contra amenazas y vulnerabilidades.",
+        imagen: "img/Logos/Security.jpg",
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    if (!id || !servicios[id]) {
+      window.location.replace("index.html#servicios");
+    } else {
+      const s = servicios[id];
+
+      document.getElementById("imagen").src = s.imagen;
+      document.getElementById("imagen").alt = s.titulo;
+      document.getElementById("titulo").textContent = `Comprar: ${s.titulo}`;
+      document.getElementById("precio").textContent = s.precio;
+      document.getElementById("descripcion").textContent = s.descripcion;
+
+      document.getElementById("servicio_id").value = id;
+      document.getElementById("servicio_nombre").value = s.titulo;
+      document.getElementById("servicio_precio").value = s.precio;
+    }
+  </script>
+
 </body>
 
 </html>
